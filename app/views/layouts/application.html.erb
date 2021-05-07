@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flix</title>
+    <title>Super-Heroic Flix</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <header>
+      <%= image_tag("logo") %>
+    </header>
+    <div class="content">
+      <%= yield %>
+    </div>
+    <footer>
+      <p>
+        Copyright &copy; 2005-<%= Time.now.year %>
+        <%= link_to 'The Pragmatic Studio','https://pragmaticstudio.com' %>
+      </p>
+    </footer>
   </body>
 </html>
