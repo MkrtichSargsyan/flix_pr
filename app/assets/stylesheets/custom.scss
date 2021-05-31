@@ -1,15 +1,15 @@
 // Colors
 
 $black: #393939;
-$off-white: #EDEDED;
+$off-white: #ededed;
 $dark-gray: #666;
 $medium-gray: #6c757d;
 $light-gray: #c2c2c2;
-$blue: #237CBE;
+$blue: #237cbe;
 $light-blue: lighten($blue, 40%);
-$orange: #E8890C;
+$orange: #e8890c;
 $yellow: #ffc107;
-$light-yellow: #FFC;
+$light-yellow: #ffc;
 $red: #dc3545;
 
 // Custom Variables
@@ -21,7 +21,7 @@ $border-color: $light-gray;
 $error-color: $red;
 $error-background-color: $light-yellow;
 $sold-out-color: $yellow;
-$box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .09);
+$box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.09);
 
 // Bootstrap Variable Overrides
 
@@ -37,71 +37,71 @@ $secondary: $dark-gray;
 // Custom CSS
 
 .content {
-	@extend .container;
+  @extend .container;
 }
 
 // Header and Nav
 
 header {
-	background-color: $primary;
-	padding: 0.5rem;
-	margin-bottom: 3rem;
+  background-color: $primary;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
 
-	nav {
-		@extend .navbar, .navbar-expand-md;
+  nav {
+    @extend .navbar, .navbar-expand-md;
 
-		img {
-			height: 50px;
-			margin-right: 0.5rem;
-		}
+    img {
+      height: 50px;
+      margin-right: 0.5rem;
+    }
 
-		a {
-			color: $secondary-link-color;
-		}
+    a {
+      color: $secondary-link-color;
+    }
 
-		a.button {
-			@extend .btn, .btn-outline-secondary;
+    a.button {
+      @extend .btn, .btn-outline-secondary;
     }
 
     ul {
       @extend .nav, .navbar-nav;
-			letter-spacing: 1px;
+      letter-spacing: 1px;
 
-			&.left {
-				@extend .mr-auto;
-			}
+      &.left {
+        @extend .mr-auto;
+      }
 
-			&.right {
-				@extend .ml-auto;
-			}
+      &.right {
+        @extend .ml-auto;
+      }
 
-			li {
-				@extend .nav-item;
-				font-size: 1.1rem;
+      li {
+        @extend .nav-item;
+        font-size: 1.1rem;
         margin-right: 5px;
 
-				a {
-				 @extend .nav-link;
-				 padding-bottom: 1px;
-				}
+        a {
+          @extend .nav-link;
+          padding-bottom: 1px;
+        }
 
-				a:hover:not(.button),
-				a.active {
-					color: $off-white;
-					border-bottom: 1px solid $off-white;
-				}
+        a:hover:not(.button),
+        a.active {
+          color: $off-white;
+          border-bottom: 1px solid $off-white;
+        }
 
-				.button {
-					margin-right: 10px;
-					color: $off-white;
-					border-color: $off-white;
-				}
+        .button {
+          margin-right: 10px;
+          color: $off-white;
+          border-color: $off-white;
+        }
 
-				.button:hover {
-					background: $off-white;
-					color: $primary;
-					border-color: $primary;
-				}
+        .button:hover {
+          background: $off-white;
+          color: $primary;
+          border-color: $primary;
+        }
       }
     }
   }
@@ -110,142 +110,142 @@ header {
 // Movies Index Page
 
 section.movie {
-	@extend .row;
-	margin-bottom: 1.5rem;
-	padding-bottom: 1em;
-	border-bottom: 1px dotted $border-color;
+  @extend .row;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted $border-color;
 
-	&:nth-last-child(1) {
-  	border-bottom: none;
-	}
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
 
-	.image {
-		@extend .col-md-3, .text-center;
-		img {
-			width: 100px;
-			box-shadow: $box-shadow;
-		}
-	}
+  .image {
+    @extend .col-md-3, .text-center;
+    img {
+      width: 100px;
+      box-shadow: $box-shadow;
+    }
+  }
 
-	.summary {
-		@extend .col-md-9, .text-left;
-	}
+  .summary {
+    @extend .col-md-9, .text-left;
+  }
 
-	h2 {
-		font-size: 1.5rem;
-		margin-bottom: 0.25rem;
-	}
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
 
-	h3 {
-		font-size: 1.1rem;
-		color: $secondary-text-color;
-		font-weight: 400;
-	}
+  h3 {
+    font-size: 1.1rem;
+    color: $secondary-text-color;
+    font-weight: 400;
+  }
 
-	p {
-		margin-top: 1.1rem;
-	}
+  p {
+    margin-top: 1.1rem;
+  }
 
-	span.stars {
-		float: right;
-		margin-top: -3.75rem;
-	}
+  span.stars {
+    float: right;
+    margin-top: -3.75rem;
+  }
 }
 
 // Movie Show Page
 
 section.movie-details {
-	@extend .row;
+  @extend .row;
 
-	.image {
-		@extend .col-md-3, .text-left;
+  .image {
+    @extend .col-md-3, .text-left;
 
-		input[type="submit"] {
-			margin-top: 1rem;
-		}
-	}
+    input[type="submit"] {
+      margin-top: 1rem;
+    }
+  }
 
-	.details {
-		@extend .col-md-7, .text-left;
-	}
+  .details {
+    @extend .col-md-7, .text-left;
+  }
 
-	aside {
-		@extend .col-md-2;
-	}
+  aside {
+    @extend .col-md-2;
+  }
 
-	h1 {
-		font-size: 2rem;
-	}
+  h1 {
+    font-size: 2rem;
+  }
 
-	h2 {
-		font-size: 1.35rem;
-		color: $secondary-text-color;
+  h2 {
+    font-size: 1.35rem;
+    color: $secondary-text-color;
   }
 
   h3 {
-		margin-top: 1.5rem;
+    margin-top: 1.5rem;
     font-size: 1.25rem;
-		color: $secondary-text-color;
-		font-weight: 300;
-	}
+    color: $secondary-text-color;
+    font-weight: 300;
+  }
 
-	table {
-		td {
-			padding-top: 0.35rem;
-			padding-bottom: 0.35rem;
-		}
-		th {
-			padding-right: 1rem;
-		}
-	}
+  table {
+    td {
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
+    }
+    th {
+      padding-right: 1rem;
+    }
+  }
 
-	.faves {
-		@extend .input-group;
-		margin-top: 1rem;
+  .faves {
+    @extend .input-group;
+    margin-top: 1rem;
 
-		form {
-			@extend .input-group-prepend;
-		}
+    form {
+      @extend .input-group-prepend;
+    }
 
-		.count {
-			@extend .input-group-append, .input-group-text;
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-		}
+    .count {
+      @extend .input-group-append, .input-group-text;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
 
-		input[type="submit"] {
-			@extend .btn, .btn-outline-secondary;
-			border-color: #cdd3d8;
-			border-right: none;
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-			margin-top: 0;
-		}
-	}
+    input[type="submit"] {
+      @extend .btn, .btn-outline-secondary;
+      border-color: #cdd3d8;
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-top: 0;
+    }
+  }
 
   p {
-		margin-top: 1rem;
+    margin-top: 1rem;
     font-size: 1.15em;
-	}
+  }
 
-	img {
-		margin-top: 0.5rem;
-		width: 150px;
-		box-shadow: $box-shadow;
-	}
+  img {
+    margin-top: 0.5rem;
+    width: 150px;
+    box-shadow: $box-shadow;
+  }
 
-	a.review {
-		@extend .btn, .btn-success;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		margin-top: 1rem;
-	}
+  a.review {
+    @extend .btn, .btn-success;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
 
-	.reviews {
-		.star-rating {
-			margin-bottom: 0.5rem;
-		}
-	}
+  .reviews {
+    .star-rating {
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 // Users Index Page
@@ -269,68 +269,68 @@ section.user {
   }
 
   h3 {
-		margin-top: 3rem;
-		font-size: 1.5rem;
-		margin-bottom: 2rem;
-	}
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
 
-	.actions {
-		margin-top: 1rem;
+  .actions {
+    margin-top: 1rem;
 
-		.button {
-			@extend .btn, .btn-sm;
+    .button {
+      @extend .btn, .btn-sm;
 
-			&.edit {
-				@extend .btn-outline-secondary;
-			}
+      &.edit {
+        @extend .btn-outline-secondary;
+      }
 
-			&.delete {
-				@extend .btn-danger;
-			}
-		}
-	}
+      &.delete {
+        @extend .btn-danger;
+      }
+    }
+  }
 
-	.review {
-		@extend .row;
-		margin: 1rem 0;
-		border-radius: 0.3rem;
-		border: 1px solid $border-color;
-		padding: 1rem;
+  .review {
+    @extend .row;
+    margin: 1rem 0;
+    border-radius: 0.3rem;
+    border: 1px solid $border-color;
+    padding: 1rem;
 
-		.details {
-			@extend .col-md-12, .text-left;
+    .details {
+      @extend .col-md-12, .text-left;
 
-			.title {
-				font-size: 1.15rem;
-				font-weight: 600;
-			}
+      .title {
+        font-size: 1.15rem;
+        font-weight: 600;
+      }
 
-			.star-rating {
-				margin-bottom: 0.3rem;
-			}
-			.date {
-				font-size: 1rem;
-				font-weight: 400;
-				color: $secondary-text-color;
-			}
+      .star-rating {
+        margin-bottom: 0.3rem;
+      }
+      .date {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $secondary-text-color;
+      }
 
-			p {
-				margin-top: 1rem;
-			}
-		}
-	}
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
 
-	.favorite-movies {
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: -1rem;
+  .favorite-movies {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1rem;
 
-		img {
-			margin: 1rem;
-			width: 150px;
-			box-shadow: $box-shadow;
-		}
-	}
+    img {
+      margin: 1rem;
+      width: 150px;
+      box-shadow: $box-shadow;
+    }
+  }
 }
 
 // Reviews Index Page
@@ -341,151 +341,153 @@ ul.reviews {
   padding: 0;
 
   li {
-		margin: 1em 0 2.5rem 0;
+    margin: 1em 0 2.5rem 0;
 
-		span {
+    span {
       &.date {
-        font-size: .8em;
-				font-weight: 400;
-				margin-left: 0.3rem;
+        font-size: 0.8em;
+        font-weight: 400;
+        margin-left: 0.3rem;
         color: $secondary-text-color;
       }
-		}
+    }
 
-		.button {
-			@extend .btn, .btn-sm, .btn-outline-danger;
-			margin-left: 0.5rem;
-		}
+    .button {
+      @extend .btn, .btn-sm, .btn-outline-danger;
+      margin-left: 0.5rem;
+    }
   }
 }
 
 // Footer
 
 footer {
-	background: $black;
+  background: $black;
   color: $light-gray;
-	text-align: center;
-	margin-top: 3rem;
+  text-align: center;
+  margin-top: 3rem;
   padding-top: 2rem;
-	padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 // Admin Section
 
 section.admin {
-	text-align: center;
-	margin: 3rem 0;
-	padding-top: 2rem;
-	border-top: 1px dashed $border-color;
+  text-align: center;
+  margin: 3rem 0;
+  padding-top: 2rem;
+  border-top: 1px dashed $border-color;
 
-	&.no-rule {
-		border-top: none;
-		padding-top: 0;
-	}
+  &.no-rule {
+    border-top: none;
+    padding-top: 0;
+  }
 
-	a.button {
-		@extend .btn, .btn-secondary;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-	}
+  a.button {
+    @extend .btn, .btn-secondary;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 }
 
 section.movie + section.admin {
   border-top: none;
-	padding-top: 0;
+  padding-top: 0;
 }
 
 // Aside
 
 aside {
-	h4 {
-		color: $secondary-text-color;
-		font-size: 1rem;
-		margin-top: 1rem;
-		padding-bottom: 0.3rem;
-		text-transform: uppercase;
+  h4 {
+    color: $secondary-text-color;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 0.3rem;
+    text-transform: uppercase;
     border-bottom: 1px solid $border-color;
-	}
+  }
 
-	ul {
-		list-style: none;
-		padding-left: 0.25rem;
+  ul {
+    list-style: none;
+    padding-left: 0.25rem;
 
-		li {
-			padding-bottom: 0.5rem;
-		}
-	}
+    li {
+      padding-bottom: 0.5rem;
+    }
+  }
 }
 
 // Forms
 
 form:not([class="button_to"]) {
-	max-width: 400px;
-	margin-top: 1.5rem;
+  max-width: 400px;
+  margin-top: 1.5rem;
 
   label {
     font-size: 1.1rem;
-		font-weight: 600;
-		display: block;
+    font-weight: 600;
+    display: block;
   }
 
-	input:not([type="checkbox"]),
-	textarea,
-	select:not(.date) {
-		@extend .form-control;
-		margin-bottom: 0.75rem;
-		width: 100%;
-	}
+  input:not([type="checkbox"]),
+  textarea,
+  select:not(.date) {
+    @extend .form-control;
+    margin-bottom: 0.75rem;
+    width: 100%;
+  }
 
-	select.date {
-		display: inline-block;
-		margin-bottom: 0.75rem;
-	}
+  select.date {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
 
-	input[type="submit"] {
-		@extend .btn, .btn-primary, .btn-block;
-		margin-top: 1.5rem;
-	}
+  input[type="submit"] {
+    @extend .btn, .btn-primary, .btn-block;
+    margin-top: 1.5rem;
+  }
 
-	input[type="checkbox"] {
-		@extend .form-check-input;
-		width: 20px;
-	  height: 20px;
-	}
+  input[type="checkbox"] {
+    @extend .form-check-input;
+    width: 20px;
+    height: 20px;
+  }
 
-	input[type="checkbox"] + label {
-		@extend .form-check-label;
-		padding-left: 0.5rem;
-		margin-bottom: 0.5rem;
-	}
+  input[type="checkbox"] + label {
+    @extend .form-check-label;
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 
-	input[type="radio"] {
-		@extend .form-check-input;
-		width: 20px;
-	  height: 20px;
-	}
+  input[type="radio"] {
+    @extend .form-check-input;
+    width: 20px;
+    height: 20px;
+  }
 
-	input[type="radio"] + label {
-		@extend .form-check-label;
-		margin-bottom: 0.6rem;
-		font-weight: 400;
-	}
+  input[type="radio"] + label {
+    @extend .form-check-label;
+    margin-bottom: 0.6rem;
+    font-weight: 400;
+  }
 
-	.star {
-		@extend .form-check, .form-check-inline;
-	}
+  .star {
+    @extend .form-check, .form-check-inline;
+  }
 
-	.checkboxes {
-		@extend .form-check;
-		margin-top: 1.5rem;
-	}
+  .checkboxes {
+    @extend .form-check;
+    margin-top: 1.5rem;
+  }
 
-	div.field_with_errors {
+  div.field_with_errors {
     display: inline;
     label {
       color: $error-color;
     }
-    input, textarea, select {
+    input,
+    textarea,
+    select {
       background: $error-background-color;
     }
   }
@@ -494,17 +496,17 @@ form:not([class="button_to"]) {
 // Flashes
 
 .flash {
-	@extend .alert;
-	text-align: center;
-	margin-top: -1rem;
-	margin-bottom: 2rem;
+  @extend .alert;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
 
   &.notice {
-		@extend .alert-success;
+    @extend .alert-success;
   }
 
   &.alert {
-		@extend .alert-danger;
+    @extend .alert-danger;
   }
 }
 
@@ -512,8 +514,8 @@ form:not([class="button_to"]) {
 
 section.errors {
   margin: 1rem 0;
-	padding: 1.5rem;
-	border-radius: 0.3rem;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
   background: $error-background-color;
 
   h2 {
@@ -522,9 +524,9 @@ section.errors {
   }
 
   h3 {
-		font-size: 1rem;
-		margin-top: 1rem;
-		font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
   }
 }
 
@@ -533,23 +535,23 @@ section.errors {
 // Credit: https://codepen.io/filcp/pen/QvZVOg
 
 .star-rating {
-	display: flex;
-	align-items: center;
-	font-size: 25px;
-	height: 25px;
-	justify-content: left;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  height: 25px;
+  justify-content: left;
 
-	.back-stars {
-		display: flex;
-		color: $light-gray;
-		position: relative;
-		// text-shadow: 0px 1px 0 #a2a2a2;
-	}
-	.front-stars {
-		display: flex;
-		color: $accent-color;
-		overflow: hidden;
-		position: absolute;
-		top: 0;
-	}
+  .back-stars {
+    display: flex;
+    color: $light-gray;
+    position: relative;
+    // text-shadow: 0px 1px 0 #a2a2a2;
+  }
+  .front-stars {
+    display: flex;
+    color: $accent-color;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+  }
 }
