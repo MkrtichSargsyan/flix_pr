@@ -10,12 +10,14 @@
   </head>
   <body>
     <header>
-      <%= link_to image_tag("logo"), root_path %>
-      <ul>
-        <li>
-          <%= link_to 'All Movies', movies_path %>
-        </li>
-      </ul>
+      <nav>
+        <%= link_to image_tag("logo"), root_path %>
+        <ul>
+          <li>
+            <%= link_to 'All Movies', movies_path %>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="content">
       <%= yield %>
