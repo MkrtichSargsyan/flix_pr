@@ -9,24 +9,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
-      <nav>
-        <%= link_to image_tag("logo"), root_path %>
-        <ul>
-          <li>
-            <%= link_to 'All Movies', movies_path %>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="content">
       <%= yield %>
     </div>
-    <footer>
-      <p>
-        Copyright &copy; 2005-<%= Time.now.year %>
-        <%= link_to 'The Pragmatic Studio','https://pragmaticstudio.com' %>
-      </p>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
