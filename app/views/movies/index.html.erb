@@ -4,7 +4,6 @@
       <h2>
         <%= movie.title %>
         <%= link_to(movie.title, movie) %>
-
       </h2>
       <h3>
         <%= total_gross(movie) %>
@@ -15,3 +14,6 @@
     </div>
   </section>
 <% end %>
+<section class="admin">
+  <%= link_to "Add New Movie", new_movie_path, class: "button" %>
+</section>
