@@ -6,10 +6,9 @@
   <%= f.text_area :description %>
 
   <%= f.label :rating %>
-  <%= f.text_field :rating %>
+  <%= f.select :rating, Movie::RATINGS, prompt: "Pick one" %>
 
   <%= f.label :released_on %>
-  <%# <%= f.date_select :released_on, {}, {class:"date"} %> 
   <%= f.date_field :released_on ,{class:"date"}%>
 
   <%= f.label :total_gross %>
