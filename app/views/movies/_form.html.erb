@@ -1,4 +1,7 @@
 <%= form_with(model: movie,local:true) do |f| %>
+
+  <%= render 'shared/errors',object:movie %>
+
   <%= f.label :title %>
   <%= f.text_field :title %>
 
