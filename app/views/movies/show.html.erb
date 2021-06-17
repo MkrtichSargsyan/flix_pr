@@ -28,5 +28,5 @@
 </section>
 <section>
   <%= link_to 'Edit', edit_movie_path(@movie),class:'button' %>
-  <%= link_to 'Delete', movie_path(@movie) %>
+  <%= link_to 'Delete', movie_path(@movie),class: 'button',method: :delete, data: { confirm: 'Are you sure?' }  %>
 </section>
