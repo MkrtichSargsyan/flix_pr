@@ -138,3 +138,9 @@ Movie.create!([
     total_gross: 821_847_012
   }
 ])
+
+movie = Movie.find_by(title: "Captain Marvel")
+
+movie.reviews.create!(name: "Larry", stars: 5, comment: "Awesome!")
+movie.reviews.create!(name: "Daisy", stars: 4, comment: "Great!")
+movie.reviews.create!(name: "Moe", stars: 3, comment: "Spilled my popcorn!")
